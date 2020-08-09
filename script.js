@@ -22,11 +22,12 @@ function searchWeather(searchTerm) {
 function init(resultFromServer) {
     switch (resultFromServer.weather[0].main) {
         case 'Clear':
+
             document.body.style.backgroundImage = "url('Clear.jpg')";
             break;
         
         case 'Clouds':
-        case 'Haze':    
+            case 'Haze':    
             document.body.style.backgroundImage = "url('Cloudy.jpg')";
             break;
 
@@ -55,7 +56,7 @@ function init(resultFromServer) {
     let cityHeader = document.getElementById('cityHeader');
 
     let weatherIcon = document.getElementById('documentIconImg');
-    weatherIcon.src = 'http://openweathermap.org/img/w/' + resultFromServer.weather[0].Icon + '.png';
+    weatherIcon.src = 'https://openweathermap.org/img/w/' + resultFromServer.weather[0].Icon + '.png';
 
     let resultDescription = resultFromServer.weather[0].description;
     weatherDescriptionHeader.innerText = resultDescription.charAt(0).toUpperCase() + resultDescription.slice(1);
