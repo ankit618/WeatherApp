@@ -23,28 +23,29 @@ function searchWeather(searchTerm) {
 function init(resultFromServer) {
     switch (resultFromServer.weather[0].main) {
         case 'Clear':
-            document.body.style.backgroundImage = "url('clear.jpg')";
+            document.body.style.backgroundImage = "url('Clear.jpg')";
             break;
         
         case 'Clouds':
-            document.body.style.backgroundImage = "url('cloudy.jpg')";
+            document.body.style.backgroundImage = "url('Cloudy.jpg')";
             break;
+            
         case 'Haze':
-            document.body.style.backgroundImage = "url('haze.jpg')";
+            document.body.style.backgroundImage = "url('Haze.jpg')";
             break;    
 
         case 'Rain':
         case 'Drizzle':
         case 'Mist':
-            document.body.style.backgroundImage = "url('rain.jpg')";
+            document.body.style.backgroundImage = "url('Rain.jpg')";
             break;
         
         case 'Thunderstorm':
-            document.body.style.backgroundImage = "url('storm.jpg')";
+            document.body.style.backgroundImage = "url('Storm.jpg')";
             break;
         
         case 'Snow':
-            document.body.style.backgroundImage = "url('snow.jpg')";
+            document.body.style.backgroundImage = "url('Snow.jpg')";
             break;
 
         default:
