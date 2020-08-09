@@ -26,6 +26,7 @@ function init(resultFromServer) {
             break;
         
         case 'Clouds':
+        case 'Haze':    
             document.body.style.backgroundImage = "url('Cloudy.jpg')";
             break;
 
